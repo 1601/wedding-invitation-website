@@ -398,6 +398,68 @@ a:hover{
     }
 }
 
+/* <===================WEDDING ENTOURAGE===================> */
+
+#entourage {
+    background-color: var(--grey-color-light);
+    padding: 10vh var(--horizontal-margin-spacing);
+    width: 100%;
+    text-align: center;
+}
+
+.entourage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20vh 0;
+}
+
+.entourage-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.entourage-item {
+    margin-bottom: 2vh;
+    width: 80%;
+}
+
+.entourage-item h3 {
+    font-size: 2rem;
+    margin-bottom: 1vh;
+    text-transform: uppercase;
+    font-family: 'Cinzel', serif;
+}
+
+.entourage-item .text {
+    font-size: 1.2rem;
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.5rem;
+}
+
+@media (max-width: 1000px) {
+    #entourage {
+        padding: 5vh 2rem;
+    }
+
+    .entourage-item {
+        width: 100%;
+    }
+
+    .entourage-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .entourage-item .text {
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+}
+
+
 /* <===================REGISTRY===================> */
 
 #registry{

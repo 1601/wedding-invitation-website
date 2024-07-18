@@ -46,3 +46,17 @@ for (var i = 0; i < reveals.length; i++) {
 }
   
 window.addEventListener("scroll", reveal);
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('.entourage-section');
+
+  sections.forEach((section, index) => {
+      section.addEventListener('wheel', (event) => {
+          if (event.deltaY > 0 && index < sections.length - 1) {
+              sections[index + 1].scrollIntoView({ behavior: 'smooth' });
+          } else if (event.deltaY < 0 && index > 0) {
+              sections[index - 1].scrollIntoView({ behavior: 'smooth' });
+          }
+      });
+  });
+});
