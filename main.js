@@ -20,7 +20,7 @@ window.addEventListener("scroll", function()
 {
     let offset = window.pageYOffset;
     offset-=4800;
-    parallax2.style.backgroundPositionY = offset*(-0.1) + "px";
+    // parallax2.style.backgroundPositionY = offset*(-0.1) + "px";
 })
 
 function myFunction() {

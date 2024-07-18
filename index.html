@@ -33,10 +33,16 @@
 
                 <button class="huge-btn">RSVP</button>
             </div>
-            <div class="home-img" id="home-img-lg"></div>
+            <div class="video-container">
+                <video id="homeVideo" autoplay loop muted>
+                    <source src="camille_and_gelo_wedding_invitation.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </div>
     </div>
-
+    <button class="fab" id="muteButton"><i class="fas fa-volume-mute"></i></button>
+    
     <div class="home-img home-img-sm"></div>
     <div class="timeline hz-margin reveal">
         <h2>Celebrating Our Love <br> With Those We Love</h2>
@@ -283,6 +289,21 @@
             modal.style.display = "none";
         }
     }
+
+    // Mute/unmute video functionality
+    const muteButton = document.getElementById('muteButton');
+    const homeVideo = document.getElementById('homeVideo');
+
+    muteButton.onclick = function() {
+        if (homeVideo.muted) {
+            homeVideo.muted = false;
+            muteButton.innerHTML = '<i class="fas fa-volume-up"></i>';
+        } else {
+            homeVideo.muted = true;
+            muteButton.innerHTML = '<i class="fas fa-volume-mute"></i>';
+        }
+    }
+
 </script>
 </body>
 </html>
