@@ -140,3 +140,39 @@ setInterval(() => {
     currentIndex = (currentIndex + 1) % totalItems;
     showItem(currentIndex);
 }, 3000);
+
+document.addEventListener("DOMContentLoaded", () => {
+    const homeVideo = document.getElementById("homeVideo");
+    const pauseButton = document.getElementById("pauseButton");
+    const slowMoButtonHalf = document.getElementById("slowMoButtonHalf");
+    const slowMoButtonQuarter = document.getElementById("slowMoButtonQuarter");
+    const normalSpeedButton = document.getElementById("normalSpeedButton");
+    const scrollToTopButton = document.getElementById("scrollToTopButton");
+  
+    pauseButton.onclick = function () {
+      if (homeVideo.paused) {
+        homeVideo.play();
+        pauseButton.innerHTML = '<i class="fas fa-pause"></i>';
+      } else {
+        homeVideo.pause();
+        pauseButton.innerHTML = '<i class="fas fa-play"></i>';
+      }
+    };
+
+    normalSpeedButton.onclick = function () {
+        homeVideo.playbackRate = 1;
+    }
+  
+    slowMoButtonHalf.onclick = function () {
+      homeVideo.playbackRate = 0.5;
+    };
+  
+    slowMoButtonQuarter.onclick = function () {
+      homeVideo.playbackRate = 0.25;
+    };
+
+    scrollToTopButton.onclick = function () {
+        window.scrollTo(0, 0);
+    };
+  });
+  

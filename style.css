@@ -219,6 +219,7 @@ a:hover {
   width: 100%;
   backdrop-filter: blur(4px);
   padding: 8vh var(--horizontal-margin-spacing);
+  z-index: 3;
 }
 .timeline-container {
   display: flex;
@@ -237,6 +238,7 @@ a:hover {
 }
 .timeline-container .text {
   padding: 1rem 0 1rem 4rem;
+  line-height: normal;
 }
 @media (max-width: 1000px) {
   .timeline {
@@ -592,6 +594,11 @@ a:hover {
   font-size: 24px;
 }
 
+#scrollToTopButton {
+  bottom: 83px;
+  padding: 18px;
+}
+
 .exit-fullscreen {
   display: none; /* Hidden by default */
   position: fixed;
@@ -641,6 +648,32 @@ a:hover {
     right: 20px;
   }
 }
+
+.video-controls {
+  position: relative;
+  bottom: 80px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.video-controls button {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .video-controls {
+    position: absolute;
+    bottom: 80px;
+    right: 20px;
+  }
+
+  .video-container.fullscreen .video-controls {
+    bottom: 20px;
+  }
+}
+
 
 /* <===================REGISTRY===================> */
 
@@ -715,7 +748,15 @@ footer {
   width: 100%;
   background-color: var(--grey-color);
   padding: 10vh 30px;
+  
 }
+
+@media (max-width: 600px) {
+  footer {
+    padding-bottom: 80vh;
+  }
+}
+
 footer h2 {
   font-size: 2rem;
   font-weight: normal;
