@@ -5,15 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/7b12bcc245.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/7b12bcc245.js" crossorigin="anonymous"></script>
     <title>Wedding Invite</title>
   </head>
   <body>
-   
-
     <div class="home hz-margin" id="part1">
       <h3>We're getting married</h3>
       <h1>Gelo & Camille</h1>
@@ -22,87 +17,51 @@
         <div class="timeline-container">
           <div class="timings">
             <h3>01.&nbsp &nbsp 
-              <span>
-                Ceremony
-              </span>
-              <a
-              href="https://g.co/kgs/NQoZ6XP"
-              target="_blank"
-              >
-              <i class="fas fa-map-marker-alt"></i>
-              Google</a
-            >
-            
-            <a
-              href="https://www.waze.com/en/live-map/directions/myons-french-mediterranean-cuisine-mayon-quezon-city?place=w.79298706.792987063.6352715&utm_campaign=default&utm_medium=lm_share_location&utm_source=waze_website"
-              target="_blank"
-              >
-              <i class="fas fa-car"></i>
-              Waze</a
-            >
+              <span>Ceremony</span>
+              <a href="https://g.co/kgs/NQoZ6XP" target="_blank">
+                <i class="fas fa-map-marker-alt"></i> Google</a>
+              <a href="https://www.waze.com/en/live-map/directions/myons-french-mediterranean-cuisine-mayon-quezon-city?place=w.79298706.792987063.6352715&utm_campaign=default&utm_medium=lm_share_location&utm_source=waze_website" target="_blank">
+                <i class="fas fa-car"></i> Waze</a>
             </h3>
             <div class="text">
-              Saturday, Sep. 7, 2024
+              Saturday, Sep. 7, 2024<br/>
               UST Chapel, Sampaloc, Manila
-              
-  
-              
             </div>
             <h3>02.&nbsp &nbsp 
               <span>Reception</span>
-              <a
-              href="https://g.co/kgs/NQoZ6XP"
-              target="_blank"
-              >
-              <i class="fas fa-map-marker-alt"></i>
-              Google</a
-            >
-            
-            <a
-              href="https://www.waze.com/en/live-map/directions/myons-french-mediterranean-cuisine-mayon-quezon-city?place=w.79298706.792987063.6352715&utm_campaign=default&utm_medium=lm_share_location&utm_source=waze_website"
-              target="_blank"
-              >
-              <i class="fas fa-car"></i>
-              Waze</a
-            >
-            
+              <a href="https://g.co/kgs/NQoZ6XP" target="_blank">
+                <i class="fas fa-map-marker-alt"></i> Google</a>
+              <a href="https://www.waze.com/en/live-map/directions/myons-french-mediterranean-cuisine-mayon-quezon-city?place=w.79298706.792987063.6352715&utm_campaign=default&utm_medium=lm_share_location&utm_source=waze_website" target="_blank">
+                <i class="fas fa-car"></i> Waze</a>
             </h3>
             <div class="text">
-              Saturday, Sep. 7, 2024 
+              Saturday, Sep. 7, 2024<br/>
               Myons Cuisine, Quezon City
-              
-             
             </div>
-           <a href="https://fb.me/1RtDrqfkw6f7r1C" class="huge-btn">RSVP</a>
+            <p>
+
+              <a href="https://fb.me/1RtDrqfkw6f7r1C" class="huge-btn" id="rsvpButton">RSVP</a>
+              <a href="#" id="playButton" class="huge-btn">Play Video</a>
+            </p>
           </div>
         </div>
+        
         <div class="video-container">
-          <video id="homeVideo" autoplay loop muted>
-            <source
-              src="gelocamillewedding.mp4"
-              type="video/mp4"
-            />
+          <video id="homeVideo" controls>
+            <source src="gelocamillewedding.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
-        <div class="video-controls">
-          <button id="pauseButton"><i class="fas fa-pause"></i></button>
-          <button id="normalSpeedButton"><i class="fas fa-tachometer-alt"></i></button>
-          <button id="slowMoButtonHalf"><i class="fas fa-tachometer-alt"></i> 0.5x</button>
-          <button id="slowMoButtonQuarter"><i class="fas fa-tachometer-alt"></i> 0.25x</button>
+        <!-- <div class="video-controls">
+          <button id="playPauseButton"><i class="fas fa-play"></i></button>
+          <button id="muteButton"><i class="fas fa-volume-up"></i></button>
+          <input type="range" id="seekBar" value="0" max="100" step="0.01">
+          <button id="fullscreenButton"><i class="fas fa-expand"></i></button>
         </div>
-        
-      </div>
+      </div> -->
     </div>
 
-    <button class="fab" id="muteButton">
-      <i class="fas fa-volume-mute"></i>
-    </button>
-    <button class="fab" id="scrollToTopButton">
-      <i class="fas fa-arrow-up"></i>
-    </button>
 
-    <button class="exit-fullscreen"><i class="fas fa-times"></i></button>
     <script src="main.js"></script>
   </body>
 </html>

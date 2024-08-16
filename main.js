@@ -1,64 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const playButton = document.getElementById("playButton");
     const video = document.getElementById("homeVideo");
-    const muteButton = document.getElementById("muteButton");
-    const pauseButton = document.getElementById("pauseButton");
-    const normalSpeedButton = document.getElementById("normalSpeedButton");
-    const slowMoButtonHalf = document.getElementById("slowMoButtonHalf");
-    const slowMoButtonQuarter = document.getElementById("slowMoButtonQuarter");
-    const scrollToTopButton = document.getElementById("scrollToTopButton");
-    const exitFullscreenButton = document.querySelector(".exit-fullscreen");
+    const rsvpButton = document.getElementById("rsvpButton");
   
-    // Play video on load without being muted
-    video.muted = false;
-    video.play();
+    // // Initially hide the RSVP button
+    // rsvpButton.style.display = "none";
   
-    // Mute/Unmute video when mute button is clicked
-    muteButton.addEventListener("click", function () {
-      if (video.muted) {
-        video.muted = false;
-        muteButton.innerHTML = '<i class="fas fa-volume-up"></i>';
-      } else {
-        video.muted = true;
-        muteButton.innerHTML = '<i class="fas fa-volume-mute"></i>';
-      }
-    });
+    // Show play button only on mobile
+    if (window.innerWidth <= 768) {
+      playButton.style.display = "block";
+    } else {
+      playButton.style.display = "none";
+    }
   
-    // Pause/Play button functionality
-    pauseButton.addEventListener("click", function () {
-      if (video.paused) {
-        video.play();
-        pauseButton.innerHTML = '<i class="fas fa-pause"></i>';
-      } else {
-        video.pause();
-        pauseButton.innerHTML = '<i class="fas fa-play"></i>';
-      }
-    });
-  
-    // Change video speed to normal
-    normalSpeedButton.addEventListener("click", function () {
-      video.playbackRate = 1.0;
-    });
-  
-    // Change video speed to 0.5x
-    slowMoButtonHalf.addEventListener("click", function () {
-      video.playbackRate = 0.5;
-    });
-  
-    // Change video speed to 0.25x
-    slowMoButtonQuarter.addEventListener("click", function () {
-      video.playbackRate = 0.25;
-    });
-  
-    // Scroll to top functionality
-    scrollToTopButton.addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  
-    // Exit fullscreen
-    exitFullscreenButton.addEventListener("click", function () {
-      if (document.fullscreenElement) {
-        document.exitFullscreen();
-      }
+    // Play video when play button is clicked and show RSVP button
+    playButton.addEventListener("click", function () {
+      video.muted = false;
+      video.play().then(() => {
+        playButton.style.display = "none";
+        // rsvpButton.style.display = "inline-block"; // Show RSVP button after the video starts
+      }).catch(error => {
+        console.error("Error playing video:", error);
+      });
     });
   });
   
